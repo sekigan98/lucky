@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF271E9TVW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QF271E9TVW');
+  </script>
+
+  <meta name="facebook-domain-verification" content="n7embscdsngbi3puwmm7e8xj82rfe1" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '31570808639231746');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=31570808639231746&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <title>LuckyBet | Casino Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --bg: #071110;
+      --bg-soft: #0b1716;
+      --card: rgba(10, 24, 23, 0.78);
+      --stroke: rgba(74, 222, 200, 0.18);
+      --primary: #3cf2d0;
+      --primary-2: #23d9c8;
+      --accent: #8bfff0;
+      --text-soft: #9fb7b3;
+      --shadow-glow: 0 0 35px rgba(60, 242, 208, 0.16);
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(60, 242, 208, 0.12), transparent 35%),
+        radial-gradient(circle at 80% 10%, rgba(35, 217, 200, 0.10), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(139, 255, 240, 0.06), transparent 40%),
+        linear-gradient(180deg, #071110 0%, #081312 45%, #050909 100%);
+      overflow-x: hidden;
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: linear-gradient(to bottom, rgba(255,255,255,0.7), transparent 92%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,0.7), transparent 92%);
+    }
+
+    .glass {
+      background: rgba(8, 18, 17, 0.62);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .fade-text {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .float-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(18px);
+      opacity: 0.28;
+      animation: floatY 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .float-orb.orb-1 {
+      width: 240px;
+      height: 240px;
+      background: rgba(60, 242, 208, 0.18);
+      top: 8%;
+      left: -4%;
+    }
+
+    .float-orb.orb-2 {
+      width: 180px;
+      height: 180px;
+      background: rgba(139, 255, 240, 0.16);
+      right: 2%;
+      top: 18%;
+      animation-delay: 1.2s;
+    }
+
+    .float-orb.orb-3 {
+      width: 220px;
+      height: 220px;
+      background: rgba(35, 217, 200, 0.12);
+      bottom: 10%;
+      left: 12%;
+      animation-delay: 2.2s;
+    }
+
+    .shine-btn {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .shine-btn::before {
+      content: "";
+      position: absolute;
+      top: -120%;
+      left: -40%;
+      width: 45%;
+      height: 300%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+      );
+      transform: rotate(18deg);
+      animation: shineSweep 3.8s linear infinite;
+      z-index: 0;
+    }
+
+    .shine-btn > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .benefit-card {
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(60, 242, 208, 0.35);
+      box-shadow: 0 16px 50px rgba(60, 242, 208, 0.12);
+    }
+
+    .mock-card {
+      animation: floatY 5s ease-in-out infinite;
+    }
+
+    .mock-card.delay-1 {
+      animation-delay: 0.8s;
+    }
+
+    .mock-card.delay-2 {
+      animation-delay: 1.5s;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pulse-badge {
+      animation: pulseGlow 2.2s ease-in-out infinite;
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-14px); }
+    }
+
+    @keyframes shineSweep {
+      0% { left: -45%; }
+      100% { left: 130%; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(60, 242, 208, 0.18);
+      }
+      50% {
+        box-shadow: 0 0 0 12px rgba(60, 242, 208, 0);
+      }
+    }
+  </style>
+</head>
+
+<body class="text-white antialiased">
+
+  <!-- Fondo decorativo -->
+  <div class="float-orb orb-1"></div>
+  <div class="float-orb orb-2"></div>
+  <div class="float-orb orb-3"></div>
+
+  <!-- HERO -->
+  <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-grid absolute inset-0 opacity-40"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Texto -->
+      <div class="text-center lg:text-left reveal">
+        <span class="pulse-badge inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full border border-[#3cf2d033] bg-[#0b1716]/80 text-sm text-[#9ef9ea]">
+          Plataforma online segura · Atención 24hs
+        </span>
+
+        <img
+          src="https://luckstar.bet/images/logos/logo_luckstar.svg"
+          alt="Logo LuckyBet"
+          class="mx-auto lg:mx-0 mb-8 w-72 md:w-80 h-auto drop-shadow-[0_0_18px_rgba(60,242,208,0.16)]"
+        />
+
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+          Viví la experiencia
+          <span class="bg-gradient-to-r from-[#8bfff0] via-[#3cf2d0] to-[#23d9c8] bg-clip-text text-transparent">
+            LuckyBet
+          </span>
+          online
+        </h1>
+
+        <p class="text-lg md:text-xl text-[#a5bbb7] mb-8 max-w-2xl mx-auto lg:mx-0">
+          Disfrutá una plataforma confiable con +2000 juegos, atención personalizada las 24 horas
+          y bono de bienvenida para empezar con todo.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+          <a id="ctaBtn"
+             role="button"
+             aria-label="Ir a WhatsApp"
+             href="#"
+             class="shine-btn inline-flex items-center justify-center bg-gradient-to-r from-[#3cf2d0] to-[#23d9c8] text-[#04100f] px-7 py-3.5 rounded-2xl font-extrabold shadow-[0_0_30px_rgba(60,242,208,0.22)] hover:scale-105 transition transform"
+             rel="noopener noreferrer">
+            <span id="ctaText">Cargando...</span>
+          </a>
+
+          <a id="ctaSmall"
+             href="#registro"
+             class="inline-flex items-center justify-center border border-[#3cf2d033] bg-[#0b1716]/70 px-5 py-3 rounded-2xl text-sm text-[#d9fffa] hover:bg-[#11201d] transition">
+            Más información
+          </a>
+        </div>
+
+        <p class="mt-6 text-sm text-[#6e8480]">
+          Hecho para quienes buscan una experiencia distinta.
+        </p>
+      </div>
+
+      <!-- Visual -->
+      <div class="relative reveal">
+        <div class="glass rounded-[32px] p-5 md:p-6">
+          <div class="rounded-[26px] border border-white/5 bg-gradient-to-br from-[#0a1716] to-[#07100f] p-6">
+            <div class="flex items-center justify-between mb-5">
+              <div>
+                <p class="text-sm text-[#89cfc4]">Panel LuckyBet</p>
+                <h3 class="text-2xl font-bold text-white">Acceso inmediato</h3>
+              </div>
+              <div class="h-3 w-3 rounded-full bg-[#3cf2d0] shadow-[0_0_20px_rgba(60,242,208,0.8)]"></div>
+            </div>
+
+            <div class="grid gap-4">
+              <div class="mock-card glass rounded-2xl p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm text-[#85b8b0]">Bono de bienvenida</p>
+                    <p class="text-xl font-bold text-[#8bfff0]">+2000 para empezar</p>
+                  </div>
+                  <span class="text-2xl">🎁</span>
+                </div>
+              </div>
+
+              <div class="mock-card delay-1 glass rounded-2xl p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm text-[#85b8b0]">Juegos disponibles</p>
+                    <p class="text-xl font-bold text-white">Más de 2000 opciones</p>
+                  </div>
+                  <span class="text-2xl">🎮</span>
+                </div>
+              </div>
+
+              <div class="mock-card delay-2 glass rounded-2xl p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm text-[#85b8b0]">Atención personalizada</p>
+                    <p class="text-xl font-bold text-white">Disponible 24/7</p>
+                  </div>
+                  <span class="text-2xl">🕐</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 rounded-2xl border border-[#3cf2d022] bg-[#081312] px-4 py-3 text-sm text-[#9cd9d0]">
+              Registrate en segundos y empezá hoy mismo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BENEFICIOS -->
+  <main class="relative py-20">
+    <section class="max-w-6xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Por qué elegir LuckyBet?</h2>
+        <p class="text-[#9bb1ad] max-w-2xl mx-auto mb-10">
+          Todo lo que necesitás para jugar con confianza, comodidad y soporte real.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="benefit-card reveal glass p-6 rounded-3xl text-left">
+          <div class="text-3xl mb-4">🎮</div>
+          <h3 class="text-xl font-semibold mb-2 text-[#8bfff0]">+2000 juegos online</h3>
+          <p class="text-[#bad0cc]">
+            Accedé a una plataforma estable y completa, con variedad para todos los gustos.
+          </p>
+        </div>
+
+        <div class="benefit-card reveal glass p-6 rounded-3xl text-left">
+          <div class="text-3xl mb-4">🎁</div>
+          <h3 class="text-xl font-semibold mb-2 text-[#8bfff0]">Bono de bienvenida</h3>
+          <p class="text-[#bad0cc]">
+            Empezá con una promo especial para nuevos usuarios y aprovechá tus primeros movimientos.
+          </p>
+        </div>
+
+        <div class="benefit-card reveal glass p-6 rounded-3xl text-left">
+          <div class="text-3xl mb-4">🕐</div>
+          <h3 class="text-xl font-semibold mb-2 text-[#8bfff0]">Atención 24 horas</h3>
+          <p class="text-[#bad0cc]">
+            Recibí ayuda personalizada cuando la necesites, con respuesta rápida por WhatsApp.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FORMULARIO / CTA FINAL -->
+  <section id="registro" class="py-20 px-6">
+    <div class="max-w-xl mx-auto glass p-8 rounded-[30px] text-center reveal">
+      <span class="inline-block mb-4 px-3 py-1 rounded-full bg-[#3cf2d014] border border-[#3cf2d033] text-sm text-[#9ef9ea]">
+        Acceso rápido
+      </span>
+
+      <h3 class="text-3xl font-bold mb-4">¿Querés empezar ahora?</h3>
+      <p class="text-sm md:text-base text-[#a2b8b4] mb-7">
+        Escribinos por WhatsApp y recibí atención personalizada para crear tu usuario y conocer la plataforma.
+      </p>
+
+      <a id="ctaBtnBottom"
+         class="shine-btn inline-flex items-center justify-center bg-gradient-to-r from-[#3cf2d0] to-[#23d9c8] text-[#04100f] px-7 py-3.5 rounded-2xl font-extrabold shadow-[0_0_30px_rgba(60,242,208,0.22)] hover:scale-105 transition transform"
+         href="#"
+         rel="noopener noreferrer">
+        <span id="ctaTextBottom">Cargando...</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center text-sm text-[#637572] border-t border-white/5">
+    © 2026 LuckyBet · Todos los derechos reservados
+  </footer>
+
+  <!-- SCRIPT: CTA dinámico + tracking + reveal -->
+  <script>
+  (function () {
+    const WA_NUMBER = '541124660272';
+
+    const phrases = [
+      "Quiero crear mi usuario gratis 🍀",
+      "Mostrame los juegos disponibles 🎮",
+      "Estoy listo para empezar con $500 💸",
+      "Quiero aprovechar el bono de bienvenida 🎁",
+      "Contame cómo funciona LuckyBet 🔍",
+      "Quiero saber cómo cargar y retirar 💰",
+      "Estoy buscando juegos confiables 👀",
+      "Quiero jugar hoy mismo 🕹️",
+      "Mostrame cómo registrarme en segundos ⚡",
+      "Quiero atención personalizada ahora 🕐",
+      "Estoy interesado en la promo de bienvenida 🎉",
+      "Quiero entrar a LuckyBet 🚀"
+    ];
+
+    const ctaTextEl = document.getElementById('ctaText');
+    const ctaBtnEl = document.getElementById('ctaBtn');
+    const ctaTextBottomEl = document.getElementById('ctaTextBottom');
+    const ctaBtnBottomEl = document.getElementById('ctaBtnBottom');
+
+    let currentIndex = Math.floor(Math.random() * phrases.length);
+
+    function buildWhatsAppHref(phrase) {
+      const base = 'https://wa.me/' + WA_NUMBER;
+      const message = `¡Hola! Quiero más información sobre LuckyBet. (${phrase})`;
+      return base + '?text=' + encodeURIComponent(message);
+    }
+
+    function fadeText(el, newText) {
+      if (!el) return;
+      el.classList.add('fade-out');
+      setTimeout(() => {
+        el.textContent = newText;
+        el.classList.remove('fade-out');
+        el.classList.add('fade-in');
+        setTimeout(() => el.classList.remove('fade-in'), 350);
+      }, 180);
+    }
+
+    function updateCTAs(index) {
+      const phrase = phrases[index];
+      fadeText(ctaTextEl, phrase);
+      fadeText(ctaTextBottomEl, phrase);
+
+      const waHref = buildWhatsAppHref(phrase);
+      ctaBtnEl.setAttribute('href', waHref);
+      ctaBtnBottomEl.setAttribute('href', waHref);
+
+      ctaBtnEl.setAttribute('aria-label', phrase + ' — Ir a WhatsApp');
+      ctaBtnBottomEl.setAttribute('aria-label', phrase + ' — Ir a WhatsApp');
+    }
+
+    function attachClickTracking(buttonEl, locationName) {
+      if (!buttonEl) return;
+
+      buttonEl.addEventListener('click', function () {
+        const eventId = 'lead_cta_' + locationName + '_' + Date.now();
+
+        try {
+          fbq('track', 'Lead', {
+            content_name: 'LuckyBet WhatsApp CTA',
+            content_category: locationName,
+            value: 0,
+            currency: 'ARS'
+          }, {
+            eventID: eventId
+          });
+        } catch (err) {
+          console.warn('fbq error', err);
+        }
+
+        try {
+          gtag('event', 'lead_whatsapp_luckybet', {
+            event_category: 'engagement',
+            event_label: locationName,
+            value: 1
+          });
+        } catch (err) {
+          console.warn('gtag error', err);
+        }
+      });
+    }
+
+    updateCTAs(currentIndex);
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % phrases.length;
+      updateCTAs(currentIndex);
+    }, 4000);
+
+    attachClickTracking(ctaBtnEl, 'hero');
+    attachClickTracking(ctaBtnBottomEl, 'bottom');
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  })();
+  </script>
+</body>
+</html>
