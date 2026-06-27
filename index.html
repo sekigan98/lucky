@@ -493,11 +493,18 @@
         const existingCode = sessionStorage.getItem(LEAD_CODE_KEY);
         if (existingCode) return existingCode;
 
-        const newCode = 'G-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        let randomPart = '';
+
+        for (let i = 0; i < 5; i++) {
+          randomPart += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+
+        const newCode = 'HG-' + randomPart;
         sessionStorage.setItem(LEAD_CODE_KEY, newCode);
         return newCode;
       } catch (err) {
-        return 'G-' + Date.now().toString(36).toUpperCase();
+        return 'HG-' + Date.now().toString(36).toUpperCase().slice(-5);
       }
     }
 
@@ -525,7 +532,7 @@
 
     function buildWhatsAppMessage() {
       const leadCode = getOrCreateLeadCode();
-      return `Hola, quiero cargar desde $500 y activar el 50% extra en mi primera carga. Mi código es: ${leadCode}`;
+      return `Hola, quiero crearme un usuario y ver el requisito para reclamar las 2000. Mi código es: ${leadCode}`;
     }
 
     function buildWhatsAppHref(phoneNumber) {
@@ -758,5 +765,4 @@
   })();
   </script>
 </body>
-</html>
 </html>
